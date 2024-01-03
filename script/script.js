@@ -176,7 +176,7 @@ let app = {
                     let text = document.createTextNode(v.toUpperCase())
                     a.appendChild(text)
                     li.appendChild(a)
-                    a.href = `./products.html?category=${v}`
+                    a.href = `./products?category=${v}`
                     frag.appendChild(li)
                 })
                 //append the list to the dom
@@ -308,13 +308,13 @@ let app = {
             ele.classList.add("active")
         }
         
-        if (window.location.pathname.endsWith("/index.html") || window.location.pathname.endsWith("/")){
+        if (window.location.pathname.endsWith("/")){
             app.home()
-        } else if (window.location.pathname.endsWith("/product.html")){
+        } else if (window.location.pathname.endsWith("/product")){
             app.product()
-        } else if (window.location.pathname.endsWith("/products.html")){
+        } else if (window.location.pathname.endsWith("/products")){
             app.products()
-        }else if (window.location.pathname.endsWith("/login.html")){
+        }else if (window.location.pathname.endsWith("/login")){
             app.login()
         }
     },
@@ -388,7 +388,7 @@ let app = {
             .then((data)=>{
                 let product = document.createElement("div")
                 product.onclick = (e)=>{
-                    location.assign(`./product.html?id=${data["id"]}`)
+                    location.assign(`./product?id=${data["id"]}`)
                 }
                 product.classList.add("landing-product")
                 product.style.zIndex = --z
@@ -434,7 +434,7 @@ let app = {
                           <h3>${v["title"]}</h3>
                           <p>${v["price"]}$</p>
                         </div>
-                        <a href="./product.html?id=${v["id"]}">See More <i class="fas fa-long-arrow-alt-right"></i></a>
+                        <a href="./product?id=${v["id"]}">See More <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                     `
                     sliderWrapper.innerHTML += sliderItem
@@ -469,7 +469,7 @@ let app = {
         
         // checking if the user sending get request without url then reallocate to home
         if(!urlParams.has("id")){
-            window.location.replace("./index.html")
+            window.location.replace("./index")
         }
 
         // fetching the product data
@@ -512,7 +512,7 @@ let app = {
                 </div>
                 <div class="text">
                     <h2 class="title">${data['title']}</h2>
-                    <a class="category "href="./products.html?category=${data['category']}">${data['category']}</a>
+                    <a class="category "href="./products?category=${data['category']}">${data['category']}</a>
                     <p class="description">${data['description']}</p>
                     <div class="price-container">
                         <div class="price">Price: ${data['price']}$</div>
@@ -656,7 +656,7 @@ let app = {
                           <h3>${v["title"]}</h3>
                           <p>${v["price"]}$</p>
                         </div>
-                        <a href="./product.html?id=${v["id"]}">See More <i class="fas fa-long-arrow-alt-right"></i></a>
+                        <a href="./product?id=${v["id"]}">See More <i class="fas fa-long-arrow-alt-right"></i></a>
                     `
                     div.innerHTML = product
                     frag.appendChild(div)
@@ -693,7 +693,7 @@ let app = {
         if(window.localStorage.getItem("token")){
 
             // if user already logged in then relocate to home
-            window.location.replace("./index.html")
+            window.location.replace("./index")
         }
 
         // getting the card container to create toggle card effect
@@ -830,7 +830,7 @@ let app = {
                 window.localStorage.setItem("token", data["id"])
 
                 // relocate to home page
-                window.location.assign("./index.html")
+                window.location.assign("./index")
             })
         }
         
@@ -889,7 +889,7 @@ let app = {
                 window.localStorage.setItem("token", data["token"])
 
                 // relocate to the home page
-                window.location.assign("./index.html")
+                window.location.assign("./index")
 
             })
             
