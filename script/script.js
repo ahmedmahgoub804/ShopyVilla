@@ -308,7 +308,7 @@ let app = {
             ele.classList.add("active")
         }
         
-        if (window.location.pathname.endsWith("/index.html")){
+        if (window.location.pathname.endsWith("/index.html") || window.location.pathname.endsWith("/")){
             app.home()
         } else if (window.location.pathname.endsWith("/product.html")){
             app.product()
