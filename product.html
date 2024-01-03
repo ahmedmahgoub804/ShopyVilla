@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopyVilla</title>
+  <!-- include font awesome -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- include css stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- include google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- start loading -->
+  <div class="overlay"></div>
+  <div class="loading">
+    <h1>ShopyVilla</h1>
+    <div class="icon-container">
+      <i class="icon fas fa-mobile"></i>
+      <i class="icon fas fa-laptop"></i>
+      <i class="icon fas fa-tshirt"></i>
+      <i class="icon fas fa-glasses"></i>
+    </div>
+  </div>
+  <!-- end loading -->
+  <!-- start cart -->
+  <div class="cart-box">
+    <div class="icon"><i class="fa fa-shopping-cart" aria-hidden="true" ></i> Cart</div>
+    <h3>Your Cart</h3>
+    <div class="products-box"></div>
+    <div class="order">
+      <div class="price">Price: <span class="total-price">0</span>$</div>
+      <div class="order-button">Order Now</div>
+    </div>
+  </div>
+  <!-- end cart -->
+  <!-- start header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="./index.html"><i class="fas fa-shopping-cart"></i> ShopyVilla</a>
+      </div>
+      <div class="secondary-container">
+        <i class="fas fa-bars toggle-menu toggle-icon"></i>
+        <ul class="links">
+          <li class="link"><a href="./index.html">Home</a></li>
+          <li class="link categ">
+            <div>Categories <i class="fa-solid fa-sort-down"></i></div>
+            <ul class="categ-list"></ul>
+          </li class="link">
+          <li class="link"><a href="./products.html">Products</a></li>
+          <li class="link"><a href="./index.html#about">About Us</a></li>
+          <li class="link"><a href="./index.html#contact">Contact</a></li>
+          <li class="login link"><a href="./login.html">Login</a></li>
+        </ul>
+        <label class="dark-container">
+          <input type="checkbox" id="dark-mode">
+          <i class="fa-regular fa-moon moon-icon"></i>
+        </label>
+      </div>
+    </div>
+  </header>
+  <!-- end header -->
+  <!-- start section -->
+  <section class="page">
+    <div class="container">
+      <div class="product-page">
+        
+      </div>
+    </div>
+  </section>  
+  <!-- end section -->
+  <!-- start footer -->
+  <footer>
+      <div class="copyright">
+        &copy; <span id="currentYear"></span> Ahmed Mahgoub
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+  </footer>
+  <!-- end footer -->
+
+  <script src="./script/script.js"></script>
+    
+</body>
+</html>
