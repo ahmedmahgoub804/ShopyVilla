@@ -394,7 +394,7 @@ a{
 }
 @media (max-width: 768px) {
   .pay-overlay .products{
-    grid-gap: 10px;
+    grid-gap: 4px;
   }
 }
 .pay-overlay .products::-webkit-scrollbar{
