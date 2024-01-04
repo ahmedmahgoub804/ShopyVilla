@@ -377,7 +377,9 @@ a{
   height: 30px;
   font-size: 25px;
   border-radius: 50%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 .pay-overlay .products{
@@ -389,6 +391,11 @@ a{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .pay-overlay .products{
+    gap: 8px;
+  }
 }
 .pay-overlay .products::-webkit-scrollbar{
   display: none;

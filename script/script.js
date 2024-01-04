@@ -469,7 +469,7 @@ let app = {
         
         // checking if the user sending get request without url then reallocate to home
         if(!urlParams.has("id")){
-            window.location.replace("./index")
+            window.location.replace("./")
         }
 
         // fetching the product data
@@ -693,7 +693,7 @@ let app = {
         if(window.localStorage.getItem("token")){
 
             // if user already logged in then relocate to home
-            window.location.replace("./index")
+            window.location.replace("./")
         }
 
         // getting the card container to create toggle card effect
@@ -830,7 +830,7 @@ let app = {
                 window.localStorage.setItem("token", data["id"])
 
                 // relocate to home page
-                window.location.assign("./index")
+                window.location.assign("./")
             })
         }
         
@@ -889,7 +889,7 @@ let app = {
                 window.localStorage.setItem("token", data["token"])
 
                 // relocate to the home page
-                window.location.assign("./index")
+                window.location.assign("./")
 
             })
             
