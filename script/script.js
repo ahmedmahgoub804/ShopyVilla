@@ -733,7 +733,7 @@ let app = {
             const usernameRegex = /^[a-zA-Z0-9_]+$/; // Alphanumeric with optional underscore for username
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation
             const phoneRegex = /^\+\d{1,3}\d{10}$/; // Country code followed by a 10-digit phone number
-            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // Minimum eight characters, at least one letter and one number
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/; // Minimum 6 characters, at least one letter and one number
 
             // getting the div that contains the message if user miss informations
             let message = document.querySelector("#signup-form .message")
@@ -770,7 +770,7 @@ let app = {
 
             // check password validation
             if (!passwordRegex.test(data.password)) {
-                message.innerText = "Invalid password. Minimum eight characters, at least one letter and one number.";
+                message.innerText = "Invalid password. Minimum 6 characters, at least one letter and one number.";
                 return;
             }
 
