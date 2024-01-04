@@ -351,7 +351,6 @@ a{
   align-items: center;
 }
 .pay-overlay .container{
-  min-height: 36%;
   max-height: 80%;
   background-color: var(--body-color);
   display: flex;
@@ -394,7 +393,7 @@ a{
 }
 @media (max-width: 768px) {
   .pay-overlay .products{
-    grid-gap: 4px;
+    grid-gap: 8px;
   }
 }
 .pay-overlay .products::-webkit-scrollbar{
