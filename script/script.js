@@ -785,11 +785,15 @@ let app = {
 
                         // if the username match then it will change the message div inner text
                         message.innerText = "The username is already taken.";
+                    }else{
+                        message.innerText = "";
                     }
                     if (data.email == v["email"]){
 
                         // if the email match then it will change the message div inner text
                         message.innerText = "This email is already used";
+                    }else{
+                        message.innerText = "";
                     }
                 })
             })
